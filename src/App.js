@@ -1,10 +1,17 @@
-import Directory from "./components/directory/Directory";
+import { Routes, Route, Outlet } from "react-router-dom";
+import HomePage from "./routes/home/HomePage";
+import Navigation from "./routes/navigation/Navigation";
+import SignIn from "./routes/sign-in/SignIn";
 
 const App = () => {
   return (
-    <div>
-      <Directory />
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<HomePage />} />
+        <Route path="/shop" element={<Navigation />} />
+        <Route path="/signin" element={<SignIn />} />
+      </Route>
+    </Routes>
   );
 };
 
