@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
@@ -7,6 +7,8 @@ import {
 import FormInput from "../form-input/FormInput";
 import Button from "../button/Button";
 import "./sign-up.form.styles.scss";
+
+import { UserContext } from "../../contexts/user.context";
 
 const defaultFormFields = {
   displayName: "",
@@ -30,6 +32,7 @@ const SignUpForm = () => {
       alert("passwords do not match");
       return;
     }
+
     try {
       const { user } = await createAuthUserWithEmailAndPassword(
         email,
