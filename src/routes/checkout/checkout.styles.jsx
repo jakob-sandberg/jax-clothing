@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CheckoutContainer = styled.div`
   width: 55%;
@@ -9,7 +9,7 @@ export const CheckoutContainer = styled.div`
   margin: 50px auto 0;
 `;
 
-export const Header = styled.div`
+export const CheckoutHeader = styled.div`
   width: 100%;
   padding: 10px 0;
   display: flex;
@@ -26,7 +26,7 @@ export const HeaderBlock = styled.div`
   }
 `;
 
-export const TotalPrice = styled.span`
+export const Total = styled.span`
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
